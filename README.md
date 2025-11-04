@@ -43,7 +43,9 @@ kallisto quant -t $use_cores -i $idx -o $FQ_out --single -l 300 -s 20 $FQ
 # Genome Coverage 
 
 If you are interested in the genome coverage you can run a now defunt psuedobam mode of kallisto to extract the coordinates on target reads are compatible with. 
-NOTE: this mode is VERY SLOW!!! Likely because it is looping over and sorting the entire input instead of extracting on target reads. Later versions of kallisto do not support this feature and it is no longer supported. 
+NOTE1: this mode is VERY SLOW!!! Likely because it is looping over and sorting the entire input instead of extracting on target reads. Later versions of kallisto do not support this feature and it is no longer supported. 
+
+NOTE2: Only paired end reads are compatible with this mode  
 
 This code chunk uses the fusion function which calls 'gene' fusion events across different anellovirus contigs if present. Mostly returns an empty file but rare samples do have a recombined anellovirus which it can flag.
 
